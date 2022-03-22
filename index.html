@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Points Admin</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script type="module" crossorigin src="/assets/index.bc62458d.js"></script>
+    <link rel="modulepreload" href="/assets/vendor.200284ec.js">
+    <link rel="stylesheet" href="/assets/index.be2648ed.css">
+  </head>
+  <body>
+    <div class="container">
+      <form class="form-points" id="pointsForm">
+        <label for="address" class="col-sm-12 col-form-label"
+          >Addresses (comma-seprated)</label
+        >
+        <div class="col-sm-12">
+          <input
+            type="text"
+            class="form-control"
+            name="address"
+            id="address"
+            placeholder="Address"
+          />
+        </div>
+
+        <label for="points" class="col-sm-12 col-form-label"
+          >Points to Award (comma-seprated)</label
+        >
+        <div class="col-sm-12">
+          <input
+            type="text"
+            class="form-control"
+            name="points"
+            id="points"
+            placeholder="Points"
+          />
+        </div>
+        <br />
+        <div class="col-sm-12">
+          <button class="btn btn-primary" id="sendbtn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+    
+  </body>
+</html>
