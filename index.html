@@ -1,59 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Points Admin</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <script type="module" crossorigin src="/assets/index.8d30b77a.js"></script>
-    <link rel="modulepreload" href="/assets/vendor.200284ec.js">
-    <link rel="stylesheet" href="/assets/index.be2648ed.css">
-  </head>
-  <body>
-    <div class="container">
-      <form class="form-points" id="pointsForm">
-        <label for="address" class="col-sm-12 col-form-label"
-          >Addresses (comma-seprated)</label
-        >
-        <div class="col-sm-12">
-          <input
-            type="text"
-            class="form-control"
-            name="address"
-            id="address"
-            placeholder="Address"
-          />
-        </div>
+<head>
+  <title>Points Admin</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <label for="points" class="col-sm-12 col-form-label"
-          >Points to Award (comma-seprated)</label
-        >
-        <div class="col-sm-12">
-          <input
-            type="text"
-            class="form-control"
-            name="points"
-            id="points"
-            placeholder="Points"
-          />
-        </div>
-        <br />
-        <div class="col-sm-12">
-          <button class="btn btn-primary" id="sendbtn" type="submit">Send</button>
-        </div>
-      </form>
-    </div>
-    
-  </body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script type="module" crossorigin src="/assets/index.24d8269c.js"></script>
+  <link rel="modulepreload" href="/assets/vendor.200284ec.js">
+  <link rel="stylesheet" href="/assets/index.a3690fab.css">
+</head>
+
+<body>
+  <!-- Points Distribution -->
+  <div class="container">
+    <h2 style="margin-top:100px">Points Distribution</h2>
+    <form class="form-points" id="pointsDistributionForm">
+      <label for="address1" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="address1" id="address1" placeholder="Address" />
+      </div>
+
+      <label for="points1" class="col-sm-12 col-form-label">Points to Award (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="points1" id="points1" placeholder="Points" />
+      </div>
+      <br />
+      <div class="col-sm-12">
+        <button class="btn btn-primary" id="sendbtn1" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Incentive Distribution -->
+  <div class="container">
+    <h2 style="margin-top:100px">Incentive Distribution</h2>
+    <form class="form-points" id="incentiveDistributionForm">
+      <label for="address2" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="address2" id="address2" placeholder="Address" />
+      </div>
+
+      <label for="points2" class="col-sm-12 col-form-label">Incenitve to Award (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="points2" id="points2" placeholder="Points" />
+      </div>
+      <br />
+      <div class="col-sm-12">
+        <button class="btn btn-primary" id="sendbtn2" type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Block Addresses -->
+  <div class="container">
+    <h2 style="margin-top:100px">Block Addresses</h2>
+    <form class="form-points" id="blockAddressForm">
+      <label for="address3" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="address3" id="address3" placeholder="Address" />
+      </div>
+      <br />
+      <div class="col-sm-12">
+        <button class="btn btn-danger" id="blockbtn" type="submit">Block</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Unblock Addresses -->
+  <div class="container">
+    <h2 style="margin-top:100px">Unblock Addresses</h2>
+    <form class="form-points" id="unblockAddressForm">
+      <label for="address4" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="address4" id="address4" placeholder="Address" />
+      </div>
+      <br />
+      <div class="col-sm-12">
+        <button class="btn btn-success" id="unblockbtn" type="submit">Unblock</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Incentive set & reset -->
+  <div class="container">
+    <h2 style="margin-top:100px">Set & Reset Incentive</h2>
+    <form class="form-points" id="incentiveSetForm">
+      <label for="address5" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="address5" id="address5" placeholder="Address" />
+      </div>
+
+      <label for="points5" class="col-sm-12 col-form-label">New Incentive (comma-seprated)</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="points5" id="points5" placeholder="Points" />
+      </div>
+      <br />
+      <div class="col-sm-12">
+        <button class="btn btn-primary" id="setbtn" type="submit">Set</button>
+      </div>
+    </form>
+  </div>
+
+  
+</body>
+
 </html>
