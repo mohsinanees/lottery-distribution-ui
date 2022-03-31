@@ -10,15 +10,20 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <script type="module" crossorigin src="/assets/index.24d8269c.js"></script>
+  <script type="module" crossorigin src="/assets/index.790ff0b3.js"></script>
   <link rel="modulepreload" href="/assets/vendor.200284ec.js">
   <link rel="stylesheet" href="/assets/index.a3690fab.css">
 </head>
 
 <body>
+
   <!-- Points Distribution -->
   <div class="container">
-    <h2 style="margin-top:100px">Points Distribution</h2>
+    <h2 style="margin-top:100px">Points Distribution <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABRklEQVRIie2WwU4CMRCGP3wHD+pKMPIyRkXewHA24LNwk4gX0Ys3DcS3ISYa7ixH3ZVDt6HbmHa6a40H/mQO3U76zUy77cBWf6RGgG8TuABOgRaQFN8/gDdgCjwD778V3AEwAr6Ab49lwFMRWC11gZUAaFsKdKpCr1EZhELN7Aeh0G5NqAkXZ57gL28GTArLPb4psC8B3wkymRj+DwL/WxuyY42bwKUkukD12Px+P6qPbO9yVKaP+Eut7coFfhUuUsVmJsguddsVVU0duyZDLgstqf/KBNkZx1TuAi8igktr2+B5RHBpbRs8I56mrslDZM9f6OH6xHOBAIwjgG98UFAPfypcUGJLYE8CBjhBXnKXZcC5FKo1oH4j0A+FanWoVvYlcFYVqrULDFEnU5LlPYI9DWlvEzbt7RHl9naOugNeivFW/0drBAkvwmmkmEUAAAAASUVORK5CYII="
+        data-toggle="tooltip" data-placement="top"
+        title="Whitelisting addresses so that they can claim via a dedicated button placed on the website a certain amount. This is not affecting the balance of staking & farming.">
+    </h2>
     <form class="form-points" id="pointsDistributionForm">
       <label for="address1" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
       <div class="col-sm-12">
@@ -38,7 +43,11 @@
 
   <!-- Incentive Distribution -->
   <div class="container">
-    <h2 style="margin-top:100px">Incentive Distribution</h2>
+    <h2 style="margin-top:100px">Incentive Distribution (Whitelisting) <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABRklEQVRIie2WwU4CMRCGP3wHD+pKMPIyRkXewHA24LNwk4gX0Ys3DcS3ISYa7ixH3ZVDt6HbmHa6a40H/mQO3U76zUy77cBWf6RGgG8TuABOgRaQFN8/gDdgCjwD778V3AEwAr6Ab49lwFMRWC11gZUAaFsKdKpCr1EZhELN7Aeh0G5NqAkXZ57gL28GTArLPb4psC8B3wkymRj+DwL/WxuyY42bwKUkukD12Px+P6qPbO9yVKaP+Eut7coFfhUuUsVmJsguddsVVU0duyZDLgstqf/KBNkZx1TuAi8igktr2+B5RHBpbRs8I56mrslDZM9f6OH6xHOBAIwjgG98UFAPfypcUGJLYE8CBjhBXnKXZcC5FKo1oH4j0A+FanWoVvYlcFYVqrULDFEnU5LlPYI9DWlvEzbt7RHl9naOugNeivFW/0drBAkvwmmkmEUAAAAASUVORK5CYII="
+        data-toggle="tooltip" data-placement="top"
+        title="Whitelist the addresses to make them eligible for incentive. The amount placed here will be accumalated to the current unclaimed incentive of the address">
+    </h2>
     <form class="form-points" id="incentiveDistributionForm">
       <label for="address2" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
       <div class="col-sm-12">
@@ -56,9 +65,45 @@
     </form>
   </div>
 
+  <!-- Fetch current and claimed incentive -->
+  <div class="container">
+    <h2 style="margin-top:100px">Current & Claimed Incentive <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABRklEQVRIie2WwU4CMRCGP3wHD+pKMPIyRkXewHA24LNwk4gX0Ys3DcS3ISYa7ixH3ZVDt6HbmHa6a40H/mQO3U76zUy77cBWf6RGgG8TuABOgRaQFN8/gDdgCjwD778V3AEwAr6Ab49lwFMRWC11gZUAaFsKdKpCr1EZhELN7Aeh0G5NqAkXZ57gL28GTArLPb4psC8B3wkymRj+DwL/WxuyY42bwKUkukD12Px+P6qPbO9yVKaP+Eut7coFfhUuUsVmJsguddsVVU0duyZDLgstqf/KBNkZx1TuAi8igktr2+B5RHBpbRs8I56mrslDZM9f6OH6xHOBAIwjgG98UFAPfypcUGJLYE8CBjhBXnKXZcC5FKo1oH4j0A+FanWoVvYlcFYVqrULDFEnU5LlPYI9DWlvEzbt7RHl9naOugNeivFW/0drBAkvwmmkmEUAAAAASUVORK5CYII="
+        data-toggle="tooltip" data-placement="top"
+        title="Whitelist the addresses to make them eligible for incentive. The amount placed here will be accumalated to the current unclaimed incentive of the address">
+    </h2>
+    <form class="form-points" id="fetchIncenitveForm">
+      <label for="address6" class="col-sm-12 col-form-label">Address</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="address6" id="address6" placeholder="Address" />
+      </div>
+
+      <div class="col-sm-12">
+        <button class="btn btn-primary" id="fetchbtn" type="submit" style="margin-top:10px">Fetch</button>
+      </div>
+
+      <label for="currentIncentive" class="col-sm-12 col-form-label">Current Incentive</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="currentIncentive" id="currentIncentive" placeholder="0"
+          disabled />
+      </div>
+
+      <label for="claimedIncentive" class="col-sm-12 col-form-label">Claimed Incentive</label>
+      <div class="col-sm-12">
+        <input type="text" class="form-control" name="claimedIncentive" id="claimedIncentive" placeholder="0"
+          disabled />
+      </div>
+      <br />
+    </form>
+  </div>
+
   <!-- Block Addresses -->
   <div class="container">
-    <h2 style="margin-top:100px">Block Addresses</h2>
+    <h2 style="margin-top:100px">Block Addresses <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABRklEQVRIie2WwU4CMRCGP3wHD+pKMPIyRkXewHA24LNwk4gX0Ys3DcS3ISYa7ixH3ZVDt6HbmHa6a40H/mQO3U76zUy77cBWf6RGgG8TuABOgRaQFN8/gDdgCjwD778V3AEwAr6Ab49lwFMRWC11gZUAaFsKdKpCr1EZhELN7Aeh0G5NqAkXZ57gL28GTArLPb4psC8B3wkymRj+DwL/WxuyY42bwKUkukD12Px+P6qPbO9yVKaP+Eut7coFfhUuUsVmJsguddsVVU0duyZDLgstqf/KBNkZx1TuAi8igktr2+B5RHBpbRs8I56mrslDZM9f6OH6xHOBAIwjgG98UFAPfypcUGJLYE8CBjhBXnKXZcC5FKo1oH4j0A+FanWoVvYlcFYVqrULDFEnU5LlPYI9DWlvEzbt7RHl9naOugNeivFW/0drBAkvwmmkmEUAAAAASUVORK5CYII="
+        data-toggle="tooltip" data-placement="top"
+        title="Block an address from the Einstein Lottery. A blocked address cannot claim points and rewards, Buy tickets, participate in the lottery, etc. A blocked address will not lose its balance">
+    </h2>
     <form class="form-points" id="blockAddressForm">
       <label for="address3" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
       <div class="col-sm-12">
@@ -73,7 +118,10 @@
 
   <!-- Unblock Addresses -->
   <div class="container">
-    <h2 style="margin-top:100px">Unblock Addresses</h2>
+    <h2 style="margin-top:100px">Unblock Addresses <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABRklEQVRIie2WwU4CMRCGP3wHD+pKMPIyRkXewHA24LNwk4gX0Ys3DcS3ISYa7ixH3ZVDt6HbmHa6a40H/mQO3U76zUy77cBWf6RGgG8TuABOgRaQFN8/gDdgCjwD778V3AEwAr6Ab49lwFMRWC11gZUAaFsKdKpCr1EZhELN7Aeh0G5NqAkXZ57gL28GTArLPb4psC8B3wkymRj+DwL/WxuyY42bwKUkukD12Px+P6qPbO9yVKaP+Eut7coFfhUuUsVmJsguddsVVU0duyZDLgstqf/KBNkZx1TuAi8igktr2+B5RHBpbRs8I56mrslDZM9f6OH6xHOBAIwjgG98UFAPfypcUGJLYE8CBjhBXnKXZcC5FKo1oH4j0A+FanWoVvYlcFYVqrULDFEnU5LlPYI9DWlvEzbt7RHl9naOugNeivFW/0drBAkvwmmkmEUAAAAASUVORK5CYII="
+        data-toggle="tooltip" data-placement="top" title="Unblock an address from the Einstein Lottery.">
+    </h2>
     <form class="form-points" id="unblockAddressForm">
       <label for="address4" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
       <div class="col-sm-12">
@@ -88,7 +136,13 @@
 
   <!-- Incentive set & reset -->
   <div class="container">
-    <h2 style="margin-top:100px">Set & Reset Incentive</h2>
+    <h2 style="margin-top:100px">Set & Reset Incentive <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAABRklEQVRIie2WwU4CMRCGP3wHD+pKMPIyRkXewHA24LNwk4gX0Ys3DcS3ISYa7ixH3ZVDt6HbmHa6a40H/mQO3U76zUy77cBWf6RGgG8TuABOgRaQFN8/gDdgCjwD778V3AEwAr6Ab49lwFMRWC11gZUAaFsKdKpCr1EZhELN7Aeh0G5NqAkXZ57gL28GTArLPb4psC8B3wkymRj+DwL/WxuyY42bwKUkukD12Px+P6qPbO9yVKaP+Eut7coFfhUuUsVmJsguddsVVU0duyZDLgstqf/KBNkZx1TuAi8igktr2+B5RHBpbRs8I56mrslDZM9f6OH6xHOBAIwjgG98UFAPfypcUGJLYE8CBjhBXnKXZcC5FKo1oH4j0A+FanWoVvYlcFYVqrULDFEnU5LlPYI9DWlvEzbt7RHl9naOugNeivFW/0drBAkvwmmkmEUAAAAASUVORK5CYII="
+        data-toggle="tooltip" data-placement="top" title="A value that had been set before via 'Incentive Distribution'
+      can be changed here afterward (higher or lower amount) but only if those points have not yet been claimed. If
+      they have been claimed already, you can only 'Block' the address entirely by using the 'Block Address' function.
+      Attention: Check upfront if points have already been claimed or not! If they have been claimed already, any
+      value put here will result in adding them to the address balance!"></h2>
     <form class="form-points" id="incentiveSetForm">
       <label for="address5" class="col-sm-12 col-form-label">Addresses (comma-seprated)</label>
       <div class="col-sm-12">
@@ -105,7 +159,19 @@
       </div>
     </form>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
 
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+
+  </script>
   
 </body>
 
